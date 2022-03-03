@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>中国民航数据</title>
+    <link rel="stylesheet" href="../static/css/index.css"/>
+</head>
+
+<body>
+<!-- 头部的盒子 -->
+<header>
+    <h1>中国民航数据</h1>
+    <div class="showTime"></div>
+    <script>
+        var t = null;
+        t = setTimeout(time, 1000); //開始运行
+        function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".showTime").innerHTML =
+                "当前时间：" +
+                y +
+                "年" +
+                mt +
+                "月" +
+                day +
+                "日-" +
+                h +
+                "时" +
+                m +
+                "分" +
+                s +
+                "秒";
+            t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+    </script>
+</header>
+
+
+<div class="div1">
+    <h2>国内航线</h2>
+</div>
+<!-- 页面主体部分 -->
+<section class="mainbox">
+    <div class="column">
+        <div class="panel line">
+            <h2>旅客运输量</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar">
+            <h2>
+                旅客周转量
+            </h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="number">
+            <div class="no-bd">
+                <ul>
+                    <li>今日国内航班架次</li>
+                    <li>今日国内航班延误</li>
+                </ul>
+            </div>
+            <div class="no-hd">
+                <ul>
+                    <li>13279</li>
+                    <li>1658</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 地图模块 -->
+        <div class="map">
+            <div class="map1"></div>
+            <div class="map2"></div>
+            <div class="map3"></div>
+            <div class="chart"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel line2">
+            <h2>货物运输量</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar2">
+            <h2>货物周转量</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+
+    </div>
+</section>
+
+
+<div class="div2">
+    <h2>国际航线</h2>
+</div>
+<!-- 页面主体部分 -->
+<section class="mainbox2">
+    <div class="column">
+        <div class="panel line11">
+            <h2>旅客运输量</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar11">
+            <h2>
+                旅客周转量
+            </h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="number">
+            <div class="no-bd">
+                <ul>
+                    <li>今日国际航班架次</li>
+                    <li>今日国际航班延误</li>
+                </ul>
+            </div>
+            <div class="no-hd">
+                <ul>
+                    <li>253</li>
+                    <li>37</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 地图模块 -->
+        <div class="mapt">
+            <div class="map1"></div>
+            <div class="map2"></div>
+            <div class="map3"></div>
+            <div class="chart"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel line21">
+            <h2>货物运输量</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar21">
+            <h2>货物周转量</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+
+    </div>
+</section>
+
+<div class="div3">
+    <h2>四大航区数据</h2>
+</div>
+<!-- 页面主体部分 -->
+<section class="mainbox3">
+    <div class="column">
+        <div class="panel line31">
+            <h2>旅客吞吐量</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie31">
+            <h2>
+                旅客吞吐量各月情况
+                <select id="select">
+                <option value="0">1月</option>
+                <option value="1">2月</option>
+                <option value="2">3月</option>
+                <option value="3">4月</option>
+                <option value="4">5月</option>
+                <option value="5">6月</option>
+                <option value="6">7月</option>
+                <option value="7">8月</option>
+                <option value="8">9月</option>
+                <option value="9">10月</option>
+                <option value="10">11月</option>
+                <option value="11">12月</option>
+            </select>
+            </h2>
+
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel bar32">
+            <h2>货邮吞吐量
+                <select id="select3">
+                <option value="0">东部地区</option>
+                <option value="1">中部地区</option>
+                <option value="2">西部地区</option>
+                <option value="3">东北地区</option>
+                </select>
+
+            </h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie32">
+            <h2>
+                货邮吞吐量各月情况
+                <select id="select2">
+                <option value="0">1月</option>
+                <option value="1">2月</option>
+                <option value="2">3月</option>
+                <option value="3">4月</option>
+                <option value="4">5月</option>
+                <option value="5">6月</option>
+                <option value="6">7月</option>
+                <option value="7">8月</option>
+                <option value="8">9月</option>
+                <option value="9">10月</option>
+                <option value="10">11月</option>
+                <option value="11">12月</option>
+            </select>
+            </h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel line33">
+            <h2>起落架次</h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie33">
+            <h2>起落架次各月情况
+            <select id="select4">
+                <option value="0">1月</option>
+                <option value="1">2月</option>
+                <option value="2">3月</option>
+                <option value="3">4月</option>
+                <option value="4">5月</option>
+                <option value="5">6月</option>
+                <option value="6">7月</option>
+                <option value="7">8月</option>
+                <option value="8">9月</option>
+                <option value="9">10月</option>
+                <option value="10">11月</option>
+                <option value="11">12月</option>
+            </select>
+            </h2>
+            <div class="chart">图表</div>
+            <div class="panel-footer"></div>
+        </div>
+
+    </div>
+</section>
+
+
+<script src="../static/js/flexible.js"></script>
+<script src="../static/js/echarts.min.js"></script>
+<script src="../static/js/jquery.js"></script>
+<script src="../static/js/china.js"></script>
+<script src="../static/js/map.js"></script>
+<script src="../static/js/controller.js"></script>
+<script src="../static/js/ec_left1.js"></script>
+<script src="../static/js/ec_left2.js"></script>
+<script src="../static/js/ec_left31.js"></script>
+<script src="../static/js/ec_right1.js"></script>
+<script src="../static/js/ec_right2.js"></script>
+<script src="../static/js/ec_left21.js"></script>
+<script src="../static/js/ec_left22.js"></script>
+<script src="../static/js/ec_left32.js"></script>
+<script src="../static/js/ec_right21.js"></script>
+<script src="../static/js/ec_right22.js"></script>
+<script src="../static/js/ec_center31.js"></script>
+<script src="../static/js/ec_center32.js"></script>
+<script src="../static/js/ec_right31.js"></script>
+<script src="../static/js/ec_right32.js"></script>
+
+
+</body>
+
+</html>
